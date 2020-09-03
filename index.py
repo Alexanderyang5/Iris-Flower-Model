@@ -78,15 +78,15 @@ accArrSepal = []
 # randomized list of nums between 1 and 100
 randnumArr = []
 
-for x in range(0,30):
-    temp = randint(1,1001)
+for x in range(0,101):
+    temp = randint(1,10001)
     if temp not in randnumArr:
         randnumArr.append(temp)
 
 print(str(len(randnumArr)))
 # running 100 test models per type of model
 count = 0
-while count < 29:
+while count < 101:
 
     # All data
     Xtrain1, Xtest1, Ytrain1, Ytest1 = train_test_split(df, tclass, test_size = 0.2, random_state = randnumArr[count])
